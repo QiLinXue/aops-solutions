@@ -1,0 +1,79 @@
+%%%%%%%%%
+% Setup %
+%%%%%%%%%
+\hfuzz=100pt 
+
+\SetupExSheets{
+  question/post-body-hook = {%
+    \hyperlink{sol:\CurrentQuestionID}{ (View Solution)}
+  },
+  solution/pre-hook = {
+    \hypertarget{sol:\CurrentQuestionID}{}%
+  } ,
+  solution/pre-body-hook = {%
+    \hyperref[qu:\CurrentQuestionID]{ (View Question)}\par
+  }
+}
+
+\SetupExSheets{
+  counter-format = ch.qu,
+  headings=runin
+} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Problems}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{question}
+Evaluate the product $(\log_2{3})(\log_3{4})(\log_4{5})(\log_5{6})(\log_6{7})(\log_7{8})$
+\end{question}
+
+\begin{solution}
+
+Use equation (1.4) we can note that if we have a product of logs and keep the bases the same, we can shift the arguments around however much we want. If we move all the arguments one to the right, and move the final argument to the first one, we get
+
+$$(\log_2{8})(\log_3{3})(\log_4{4})(\log_5{5})(\log_6{6})(\log_7{7})$$
+
+Since $\log_n{n} = 1$ we can cancel everything and get our answer of \boxed{3} 
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{question}
+If $\log{36} = a$ and $\log{125} = b$, express $\log{\frac{1}{12}}$ in terms of \linebreak
+$a$ and $b$. (MAO 1992)
+\end{question}
+
+\begin{solution}
+
+TBA
+
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\section{Solutions}
+
+
+\printsolutions
