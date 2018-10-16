@@ -4,7 +4,7 @@
 \hfuzz=100pt 
 
 \SetupExSheets{
-  question/post-body-hook = {%
+  question/pre-body-hook = {%
     \hyperlink{sol:\CurrentQuestionID}{ (View Solution)}
   },
   solution/pre-hook = {
@@ -26,7 +26,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 \section{Problems}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -55,7 +55,7 @@ Since $\log_n{n} = 1$ we can cancel everything and get our answer of \boxed{3}
 
 \begin{question}
 
-If $\log(36) = a$ and $\log(125) = b$, express $\log(\frac{1}{12})$ in terms of $a$ and $b$. (MAO 1992)
+If $\log(36) = a$ and $\log(125) = b$, express $\log(\frac{1}{12})$ in terms of $a$ and $b$.
 
 \end{question}
 
@@ -72,6 +72,65 @@ $$-(\log(6 \times 10) - \log(5) = -(\log(6)+\log(10)-\log(5)$$
 $$-(\frac{a}{2}+1-\frac{b}{3})$$
 
 The answer is \boxed{\frac{b}{3}-\frac{a}{2}-1}
+
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{question}
+
+At which point(s) do $y=2\log(x)$ and $y=\log(2x)$ intersect?
+
+\end{question}
+
+\begin{solution}
+
+To begin, let's set both equations equal to each other: $2\log(x)=\log(2x)$. Notice that 
+$2\log(x)=\log(x^2)$ We can simplify both sides:
+
+$$10^{\log(x^2)}=2^{\log(2x)} \rightarrow x^2 = 2x $$
+
+Solving this quadratic equation gives $x=2$ and $x=0$ Since $\log(0)$ is undefined,
+\boxed{x=2} is the only interesection point
+
+\newpage
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+
+Find all solutions of:
+
+$$x^{\log(x)} = \frac{x^3}{100}$$
+
+\end{question}
+
+\begin{solution}
+We can take the base-x logarithm of both sides and using theorem (1.1) and (1.5):
+
+$$
+  \log_x(x^{\log(x)}) = \log_x(\frac{x^3}{100}) 
+  \rightarrow 
+  \log(x)\log_x(x) = \log_x(\frac{x^3}{10^2})
+$$
+
+$$
+  \log_{10}(x) = \log_x(x^3)-\log_x(10^2)
+  \rightarrow
+  \log_{10}(x) = 3-\frac{2 \times \log_{10}(10)}{\log_{10}(x)}
+  \rightarrow
+  \log_{10}(x) = 3-2\frac{1}{\log_{10}(x)}
+$$
+
+Substituting $u=\log_{10}(x)$ gives:
+
+$$ u = 3-\frac{2}{u} $$
+
+Solving this quadratic equation gives \boxed{x\in\{10, 100\}}
 
 \end{solution}
 
