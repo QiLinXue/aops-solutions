@@ -34,7 +34,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{question}
+
 Evaluate the product $(\log_2{3})(\log_3{4})(\log_4{5})(\log_5{6})(\log_6{7})(\log_7{8})$
+
 \end{question}
 
 \begin{solution}
@@ -44,6 +46,7 @@ Use equation (1.4) we can note that if we have a product of logs and keep the ba
 $$(\log_2{8})(\log_3{3})(\log_4{4})(\log_5{5})(\log_6{6})(\log_7{7})$$
 
 Since $\log_n{n} = 1$ we can cancel everything and get our answer of \boxed{3} 
+
 \end{solution}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -51,13 +54,24 @@ Since $\log_n{n} = 1$ we can cancel everything and get our answer of \boxed{3}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{question}
-If $\log{36} = a$ and $\log{125} = b$, express $\log{\frac{1}{12}}$ in terms of \linebreak
-$a$ and $b$. (MAO 1992)
+
+If $\log(36) = a$ and $\log(125) = b$, express $\log(\frac{1}{12})$ in terms of $a$ and $b$. (MAO 1992)
+
 \end{question}
 
 \begin{solution}
 
-TBA
+First we note that $36$ and $125$ are both a perfect square and cube, respectively. Therefore, we can simplify these equations by writing them with an exponent: 
+$\log(36) = \log(6^2) = 2\log(6)$ and $\log(125) = \log(5^3) = 3\log(5)$
+
+Start with $\log(\frac{1}{12})$ and note it is equal to $\log(1)-\log(12) = -\log(12)$. We know from the first step we need to somehow include both $\log(5)$ and $\log(6)$, therefore we need to include these expressions in our solution somewhere...
+
+After some experimentation, we find that $-\log(12) = -\log(\frac{6 \times 10}{5})$ which is equal to:
+
+$$-(\log(6 \times 10) - \log(5) = -(\log(6)+\log(10)-\log(5)$$
+$$-(\frac{a}{2}+1-\frac{b}{3})$$
+
+The answer is \boxed{\frac{b}{3}-\frac{a}{2}-1}
 
 \end{solution}
 
