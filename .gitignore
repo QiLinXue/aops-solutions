@@ -12,6 +12,9 @@
 *.cb2
 .*.lb
 
+# Editor config
+.vscode/*
+
 ## Intermediate documents:
 *.dvi
 *.xdv
