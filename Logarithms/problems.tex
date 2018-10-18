@@ -161,6 +161,35 @@ Raise a to the power of both sides and we get: \boxed{a^p = \log_b(a)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question}
 
+If one uses only the information $10^3 = 1000$, $10^4 = 10000$, $2^{10} = 1024$, $2^{11}=2048$,
+$2^{12}=4096$,  $2^{13}=8192$, what are the largest $a$ and $b$ such that one can prove
+$a<\log_{10}(2)<b$?
+
+\end{question}
+
+\begin{solution}
+
+First, notice that $2^10 \approx 10^3$ so maybe we can use this somehow in our answer? First, we can rewrite our inequality:
+
+$$
+a<\log_{10}(2)<b \rightarrow 10^a < 2 < 10^b
+$$
+
+Now, raise everything to the power of 10 so the middle number could be $2^{10} = 1024 \approx 1000$. This would lead to:
+
+$$
+10^{10a} < 1024 < 10^{10b}
+$$
+
+We know that the two closest powers of 10 near 1024 is $10^3$ and $10^4$. Thus: $10a=3$ and $10b=4$. Solving these two equations gives \boxed{a=\frac{3}{10},b=\frac{2}{5}}
+
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+
 Simplify $\frac{1}{\log_3(x)} + \frac{1}{\log_4(x)} + \frac{1}{\log_5(x)}$
 
 \end{question}
