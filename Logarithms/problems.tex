@@ -199,6 +199,8 @@ We can perform a change of base to base-x on each individual term to bring the l
 
 $$\frac{1}{\log_n(x)} = \frac{\log_n(n)}{\log_n(x)} = \log_x(n)$$
 
+\newpage
+
 Thus:
 
 $$
@@ -210,7 +212,6 @@ $$
 
 The answer is \boxed{\log_x(60)}
 
-\newpage
 \end{solution}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -293,8 +294,6 @@ $$
    \frac{\ln(p)}{\ln(9)} = \frac{\ln(q)}{\ln(12)} = \frac{\ln(p+q)}{\ln(16)}
 $$
 
-\newpage
-
 Cross multiplying them, we get:
 
 $$
@@ -309,12 +308,20 @@ $$
 
 Adding these two equations up gives:
 
+\begin{equation*}
+  \begin{aligned}
+  & \ln(12)(\ln(p)+\ln(p+q)) = \ln(q)(\ln(9)+\ln(16)) \\
+  & \ln(12)(\ln(p(p+q))) = \ln(q)(\ln(144)) \\
+  & \ln(12)(\ln(p(p+q))) = 2\ln(q)(\ln(12)) \\
+  & \ln(p(p+q)) = \ln(q^2) \\
+  & p^2 + pq = q^2
+  \end{aligned}
+\end{equation*}
+
+Divide both sides by $pq$ and set the desired value of $\frac{q}{p}$ to x:
+
 $$
-  \ln(12)(\ln(p)+\ln(p+q)) = \ln(q)(\ln(9)+\ln(16)) \\
-  \ln(12)(\ln(p(p+q))) = \ln(q)(\ln(144)) \\
-  \ln(12)(\ln(p(p+q))) = 2\ln(q)(\ln(12)) \\
-  \ln(p(p+q)) = \ln(q^2) \\
-  p^2 + pq = q^2
+   \frac{p^2}{pq} + \frac{pq}{pq} = \frac{q}{p} \rightarrow x + 1 + \frac{1}{x}
 $$
 
 Solving this quadratic gives the answer as: \boxed{\frac{1+\sqrt{5}}{2}}
@@ -327,13 +334,31 @@ Solving this quadratic gives the answer as: \boxed{\frac{1+\sqrt{5}}{2}}
 
 \begin{question}
 
-Given that $\log_{4n}(40\sqrt(3)) = \log_{3n}(45)$, find $n^3$
+Given that $\log_{4n}(40\sqrt{3}) = \log_{3n}(45)$, find $n^3$
 
 \end{question}
   
 \begin{solution}
 
-lol you think I'm smart enough to solve this? xD
+Let $ t = \log_{4n}(40\sqrt{3}) = \log_{3n}(45) $ such that $4^tn^t = 40\sqrt{3}$ and
+$3^tn^t = 45$. Make a ratio out of these two equations:
+
+$$
+\begin{aligned}
+& \frac{4^tn^t}{3^tn^t} = \frac{40\sqrt{3}}{45} \\
+& \frac{4}{3}^t = \frac{8\sqrt{3}}{9} \\
+& \frac{4}{3}^t = \frac{8}{3\sqrt{3}}
+\end{aligned}
+$$
+
+We just need to solve for t. Under closer examination, we find that the numerator and denominator can both be multiplied by their respective square roots to get to their counterparts on the right side. Therefore, $t=\frac{3}{2}$ using the equation from earlier:
+
+$$
+4^\frac{3}{2}n^\frac{3}{2} = 40\sqrt{3} \rightarrow n^\frac{3}{2} = 5\sqrt{3} \rightarrow
+n^3 = 25 \times 3 = 75
+$$
+
+The answer is \boxed{n^3 = 75}
 
 \end{solution}
 
@@ -354,10 +379,36 @@ What is the value of $\frac{b}{a}?$
 \end{question}
     
 \begin{solution}
-  
-lol you think I'm smart enough to solve this? xD
-  
+
+The answer can be solved in the exact same steps as Exercise 1.10. Simplify perform a change in base,and create a syystem of two equations:
+
+\begin{equation*}
+  \begin{aligned}
+    & \log_9(a) = \log_{15}(b) = \log_{25}(a+2b) \\
+    & \frac{\ln(9)}{\ln(a)} = \frac{\ln(15)}{\ln(b)} = \frac{\ln(25)}{\ln(a+2b)} \\
+    & \begin{cases}
+      \ln(a)\ln(15) = \ln(b)\ln(9) \\
+      \ln(a+2b)\ln(15) = \ln(b)\ln(25)
+    \end{cases}
+  \end{aligned}
+\end{equation*}
+
+Add both equations up to create:
+
+\begin{equation*}
+  \begin{aligned}
+  & \ln(15)(\ln(a)+\ln(a+2b)) = \ln(b)(\ln(9)+\ln(25)) \\
+  & \ln(15)(\ln(a(a+2b))) = \ln(b)(2\ln(3)+2\ln(5)) \\
+  & \ln(15)(\ln(a(a+2b))) = 2\ln(b)\ln(15) \\
+  & \ln(a(a+b)) = \ln(b^2) \\
+  & a^2 + ab = b^2
+  \end{aligned}
+\end{equation*}
+
+This results in the same answer as 1.10: \boxed{\frac{1+\sqrt{5}}{2}}
+
 \end{solution}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -375,8 +426,27 @@ $$
     
 \begin{solution}
   
-lol you think I'm smart enough to solve this? xD
-  
+The trick to this question is to first rewrite the given in terms of a and b, then work backwards. We know that $a=\log_{60}(3)$ and $b=\log_{60}(5)$. Just looking at the exponent of 
+$12^{\frac{1-a-b}{2-2b}}$ we have:
+
+\begin{equation*}
+  \begin{aligned}
+  & \frac{1-a-b}{2-2b} = 
+    \frac{\log_{60}(60)-\log_{60}(3)-\log_{60}(5)}
+         {2(\log_{60}(60)-\log_{60}(5))}\\
+  & \frac{\log_{60}(60/3/5)}{2\log_{60}(60/5)} = \frac{\log_{60}(4)}{2\log_{60}(12} \\
+  & \frac{\log_{60}(4)}{\log_{60}(144)} = \log_{144}(4) = \log_{12}(2)
+  \end{aligned}
+\end{equation*}
+
+Now after adding in the base:
+
+$$
+  12^{\log_{12}(2)} = 2
+$$
+
+The answer is \boxed{2}
+
 \end{solution}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
